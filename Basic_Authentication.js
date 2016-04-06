@@ -5,7 +5,6 @@
  */
 
 var https = require('https');
-var fs = require('fs');
 
 var token = auth_token("Enter Your ClientID Here.", "Enter Your Client Secret Here.");
 
@@ -51,7 +50,6 @@ var req = https.request(
                 /*You now have the cookies in a format that will allow you to authenticate 
                   and access the NextGen ALM API's*/
                 console.log(ALM_COOKIES);
-                fs.writeFile('cookies.txt', ALM_COOKIES);
             }
             else
                 console.log("Cookie Monster has no cookies!");
